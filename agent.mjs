@@ -50,6 +50,7 @@ export async function runContentWorkflow(input_as_text) {
     ]);
 
     if (!run.finalOutput) throw new Error("Agent result is undefined");
+
     return { output_text: run.finalOutput };
   });
 }
@@ -68,6 +69,7 @@ export async function runDMWorkflow(input_as_text) {
     ]);
 
     if (!run.finalOutput) throw new Error("Agent result is undefined");
+
     return { output_text: run.finalOutput };
   });
 }
