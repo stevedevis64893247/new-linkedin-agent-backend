@@ -4,7 +4,7 @@ function assertAuth(req) {
   const expected = process.env.N8N_SHARED_SECRET;
   if (!expected) throw new Error("Missing N8N_SHARED_SECRET env var");
 
-  const got = req.headers["x-api-key"];
+  const got = req.headers?.["x-api-key"] || req.headers?.["X-API-KEY"];
   if (!got || got !== expected) {
     const err = new Error("Unauthorized");
     err.statusCode = 401;
