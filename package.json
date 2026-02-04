@@ -1,8 +1,0 @@
-{
-  "name": "new-linkedin-agent-backend",
-  "private": true,
-  "type": "module",
-  "dependencies": {
-    "@openai/agents": "latest"
-  }
-}
